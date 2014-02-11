@@ -6,7 +6,23 @@ $(document).ready(function() {
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
   
   $( "#tweet" ).submit(function( event ) {
-    alert( "Handler for .submit() called." );
     event.preventDefault();
+
+   $.ajax({
+    url : "/tweet",
+    type: "POST",
+    data : $("#tweet").serialize(),
+    success: function()
+    { 
+        $("#previous_tweet").text("Success!");
+        console.log('success');
+        document.forms["tweet"].reset();
+    }
+
+    });
+
+    $("#previous_tweet").text("Waiting!");
+
+
   });
 });
