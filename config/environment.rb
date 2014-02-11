@@ -14,6 +14,7 @@ require 'pathname'
 require 'pg'
 require 'active_record'
 require 'logger'
+require 'twitter'
 
 require 'sinatra'
 require "sinatra/reloader" if development?
@@ -31,3 +32,10 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
+
+CLIENT = Twitter::REST::Client.new do |config|
+  config.consumer_key    = "euchzowuYMqqK1IxJSBA"
+  config.consumer_secret = "SSTFtu2QSkTnMqZhZ6neOJsXEbK7zFeUp9kas0pm60"
+  config.access_token        = "128418777-ylr8Vd5mmCiftcAmm9dj6qehvI7zsbw66UN2Xdcr"
+  config.access_token_secret = "eIgDgCJoF0X7m8600cd2TGPDFQZ4wtwFfCAbRdWkI5URX"
+end
