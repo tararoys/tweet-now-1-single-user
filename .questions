@@ -1,0 +1,11 @@
+1. What is my authentication credentials? 
+
+CLIENT = Twitter::REST::Client.new do |config|
+  config.consumer_key    = "128418777-rBg2zSuF2UpMgRpvMOl4eoDyC7b7RWN28WVUvuJf"
+  config.consumer_secret = "XkJkelCql76HdozieCBlKcxiubeJGMxq8fsTbhpt5Y4ip"
+end
+
+
+2. How can juan see the tweet I tweeted at him? 
+
+Dunno. Ask later. 
