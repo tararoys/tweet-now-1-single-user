@@ -4,5 +4,9 @@ get '/' do
 end
 
 post '/tweet' do 
-  params.inspect
+
+  puts params[:tweet]
+  CLIENT.update(params[:tweet])
+  "You just posted" + params[:tweet]
+
 end
