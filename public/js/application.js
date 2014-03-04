@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   $( "#tweet" ).submit(function( event ) {
     event.preventDefault();
-    console.log("doing it");
+    $("#reply").text("Twitter is posting your tweet...");
 
      $.ajax({
       url : "/tweet",
